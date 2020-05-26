@@ -1,4 +1,4 @@
-# constraintlayout-flow-example
+# FlowExample
 
 <h3>Пример использования androidx.constraintlayout.helper.widget.Flow в связке с MotionLayout.</h3>
 
