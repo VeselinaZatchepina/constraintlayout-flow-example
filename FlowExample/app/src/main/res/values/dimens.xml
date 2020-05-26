@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <dimen name="container_start_width">200dp</dimen>
+    <dimen name="colored_card_padding">10dp</dimen>
+    <dimen name="colored_card_size">40dp</dimen>
+</resources>

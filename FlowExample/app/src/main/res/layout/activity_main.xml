@@ -1,0 +1,96 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.motion.widget.MotionLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/motionLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    app:layoutDescription="@xml/motion_scene"
+    tools:context=".MainActivity"
+    tools:showPaths="true">
+
+    <androidx.cardview.widget.CardView
+        android:id="@+id/container"
+        android:layout_width="@dimen/container_start_width"
+        android:layout_height="wrap_content"
+        app:layout_constraintBottom_toBottomOf="@+id/horizontal_guideline"
+        app:layout_constraintEnd_toEndOf="@+id/vertical_guideline"
+        app:layout_constraintStart_toStartOf="@+id/vertical_guideline"
+        app:layout_constraintTop_toTopOf="@+id/horizontal_guideline">
+
+
+        <androidx.constraintlayout.widget.ConstraintLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal">
+
+            <include
+                android:id="@+id/card_1"
+                layout="@layout/item_green_card" />
+
+            <include
+                android:id="@+id/card_2"
+                layout="@layout/item_red_card" />
+
+            <include
+                android:id="@+id/card_3"
+                layout="@layout/item_green_card" />
+
+            <include
+                android:id="@+id/card_4"
+                layout="@layout/item_red_card" />
+
+            <include
+                android:id="@+id/card_5"
+                layout="@layout/item_blue_card" />
+
+            <include
+                android:id="@+id/card_6"
+                layout="@layout/item_red_card" />
+
+            <include
+                android:id="@+id/card_7"
+                layout="@layout/item_green_card" />
+
+            <include
+                android:id="@+id/card_8"
+                layout="@layout/item_red_card" />
+
+            <include
+                android:id="@+id/card_9"
+                layout="@layout/item_green_card" />
+
+            <androidx.constraintlayout.helper.widget.Flow
+                android:id="@+id/flow"
+                android:layout_width="0dp"
+                android:layout_height="wrap_content"
+                android:padding="@dimen/colored_card_padding"
+                app:constraint_referenced_ids="card_1,card_2,card_3,card_4,card_5,card_6,card_7,card_8,card_9"
+                app:flow_horizontalGap="@dimen/colored_card_padding"
+                app:flow_horizontalStyle="packed"
+                app:flow_verticalGap="@dimen/colored_card_padding"
+                app:flow_wrapMode="aligned"
+                app:layout_constraintEnd_toEndOf="parent"
+                app:layout_constraintStart_toStartOf="parent"
+                app:layout_constraintTop_toTopOf="parent" />
+
+        </androidx.constraintlayout.widget.ConstraintLayout>
+
+    </androidx.cardview.widget.CardView>
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/vertical_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="vertical"
+        app:layout_constraintGuide_percent="0.5" />
+
+    <androidx.constraintlayout.widget.Guideline
+        android:id="@+id/horizontal_guideline"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        app:layout_constraintGuide_percent="0.5" />
+
+
+</androidx.constraintlayout.motion.widget.MotionLayout>
